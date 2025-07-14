@@ -9,13 +9,13 @@ This repository contains the PyTorch implementation for [BCNet: Butterfly-shaped
 ```bash
 
 # using BCNet
-python gererate.py --custompath /path/to/data --ckpt ./ckpts/BCNet.pth --basic_c 56 --save_path ./results # --invert # generate inverse edge map
+python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet.pth --basic_c 56 --save_path ./results # --invert # generate inverse edge map
 
 # using BCNet-Small
-python gererate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Small.pth --basic_c 40 --save_path ./results # --invert # generate inverse edge map
+python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Small.pth --basic_c 40 --save_path ./results # --invert # generate inverse edge map
 
 # using BCNet-Tiny
-python gererate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Tiny.pth --basic_c 16 --save_path ./results # --invert # generate inverse edge map
+python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Tiny.pth --basic_c 16 --save_path ./results # --invert # generate inverse edge map
 
 ```
 
