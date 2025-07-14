@@ -17,7 +17,6 @@ pip install torch thop opencv-python torchvision
 # using BCNet
 python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet.pth --basic_c 56 --save_path ./results # --invert # generate inverse edge map
 
-
 # using BCNet-Small
 python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Small.pth --basic_c 40 --save_path ./results # --invert # generate inverse edge map
 
