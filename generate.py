@@ -2,9 +2,7 @@ import os
 from datetime import datetime
 import cv2
 import torch
-import sys
-sys.path.append("src")  
-import model
+from src import model
 from torchvision import transforms
 import argparse
 import glob
@@ -34,7 +32,7 @@ class CustomDataset(Dataset):
 
 def args_init():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--custompath', type=str, default='/mnt/d/DL/datasets/HEDdataset/HED-BSDS/test', help='Path to custom images for inference')
+    parser.add_argument('--custompath', type=str, default='Coloring', help='Path to custom images for inference')
     parser.add_argument('--ckpt', type=str, default='./ckpts/BCNet-Tiny.pth', help='Path to the model checkpoint')
     parser.add_argument('--basic_c', type=int, default=16, help='')
     parser.add_argument('--range', type=int, default=1, help='')

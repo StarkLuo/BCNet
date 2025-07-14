@@ -2,7 +2,12 @@
 
 This repository contains the PyTorch implementation for [BCNet: Butterfly-shaped Convolutions Network for Lightweight Edge Detection]
 
+## Creating conda env
+```bash
+conda create -n bcnet python=3.10
+pip install torch thop opencv-python
 
+```
 
 
 ## Generating edge images
@@ -10,6 +15,8 @@ This repository contains the PyTorch implementation for [BCNet: Butterfly-shaped
 
 # using BCNet
 python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet.pth --basic_c 56 --save_path ./results # --invert # generate inverse edge map
+
+python generate.py --custompath Coloring --ckpt ./ckpts/BCNet.pth --basic_c 56 --save_path ./results # --invert
 
 # using BCNet-Small
 python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Small.pth --basic_c 40 --save_path ./results # --invert # generate inverse edge map
