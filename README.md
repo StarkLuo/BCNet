@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation for [BCNet: Butterfly-shaped
 ```bash
 conda create -n bcnet python=3.10
 conda activate bcnet
-pip install torch thop opencv-python torchvision
+pip install torch opencv-python torchvision
 
 ```
 
