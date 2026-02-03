@@ -14,14 +14,9 @@ pip install torch opencv-python torchvision
 ## Generating edge images
 ```bash
 
-# using BCNet
 python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet.pth --basic_c 56 --save_path ./results # --invert # generate inverse edge map
 
-# using BCNet-Small
-python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Small.pth --basic_c 40 --save_path ./results # --invert # generate inverse edge map
 
-# using BCNet-Tiny
-python generate.py --custompath /path/to/data --ckpt ./ckpts/BCNet-Tiny.pth --basic_c 16 --save_path ./results # --invert # generate inverse edge map
 
 ```
 
@@ -49,3 +44,4 @@ In the process of building the code, we also consulted the following open-source
   publisher={Elsevier}
 }
 ~~~
+
