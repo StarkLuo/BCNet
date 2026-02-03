@@ -33,7 +33,7 @@ class CustomDataset(Dataset):
 def args_init():
     parser = argparse.ArgumentParser()
     parser.add_argument('--custompath', type=str, default='Coloring', help='Path to custom images for inference')
-    parser.add_argument('--ckpt', type=str, default='./ckpts/BCNet-Tiny.pth', help='Path to the model checkpoint')
+    parser.add_argument('--ckpt', type=str, default='./ckpts/BCNet.pth', help='Path to the model checkpoint')
     parser.add_argument('--basic_c', type=int, default=16, help='')
     parser.add_argument('--range', type=int, default=1, help='')
     parser.add_argument('--device_num', type=str, default='cuda:0', help='cuda:0')
@@ -74,4 +74,5 @@ def generator(args):
 
 if __name__ == "__main__":
     args = args_init()
+
     generator(args)
