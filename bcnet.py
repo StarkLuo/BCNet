@@ -10,6 +10,8 @@ import torch
 import torch.nn as nn
 
 
+
+
 class bsbias(nn.Module):
     def __init__(self, dim, scale=1.0):
         super().__init__()
@@ -17,7 +19,7 @@ class bsbias(nn.Module):
         self.dim = dim
         self.scale = scale
 
-    def forward(self, x):  
+    def forward(self, x): 
         device = x.device
         half_dim = self.dim // 2
         emb = math.log(10000) / half_dim
@@ -254,12 +256,12 @@ class decoder(nn.Module):
         out =  self.head(x1)
         
 
-        return out.sigmoid()
+        return out.sigmoid()#, x1.mean(), x2.mean(), x3.mean()
 
 
-class BCNet(nn.Module):
+class bcnet(nn.Module):
     def __init__(self, args=None):
-        super(BCNet, self).__init__()
+        super(bcnet, self).__init__()
         basic_c = args.basic_c
         channels = [basic_c, basic_c*2, basic_c*3, basic_c*3]
         self.input = nn.Conv2d(in_channels=3, out_channels=channels[0], kernel_size=3, padding=1)
@@ -271,7 +273,8 @@ class BCNet(nn.Module):
 
     def forward(self, x):
         feaure = self.input(x)
-        feaure = self.cpx(x=feaure) 
+        feaure = self.cpx(x=feaure)  # 加入BS bias
         feaure, diff = self.encoder(feaure)
+        # edge, x1, x2, x3 = self.decoder(feaure, diff)
         edge = self.decoder(feaure, diff)
-        return edge
+        return edge# , x1, x2, x3
