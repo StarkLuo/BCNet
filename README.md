@@ -1,6 +1,6 @@
 # BCNet: Butterfly-shaped Convolutions Network for Lightweight Edge Detection
 
-This repository contains the PyTorch implementation for [BCNet: Butterfly-shaped Convolutions Network for Lightweight Edge Detection]
+This repository contains the PyTorch implementation for [BCNet: Butterfly-shaped Convolutions Network for Lightweight Edge Detection](https://ieeexplore.ieee.org/document/11370249)
 
 ## Generating edge images
 ```bash
@@ -38,6 +38,7 @@ In the process of building the code, we also consulted the following open-source
   publisher={Elsevier}
 }
 ~~~
+
 
 
 
