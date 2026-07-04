@@ -28,6 +28,15 @@ In the process of building the code, we also consulted the following open-source
 
 ## Citation
 ~~~
+@article{luo2026bcnet,
+  title={BCNet: Butterfly-shaped Convolutions Network for Lightweight Edge Detection},
+  author={Luo, Zhengqiao and Zhang, Zhenjun and Lin, Chuan and Wang, Yaonan},
+  journal={IEEE Transactions on Multimedia},
+  year={2026},
+  publisher={IEEE}
+}
+~~~
+~~~
 @article{luo2023blednet,
   title={Blednet: bio-inspired lightweight neural network for edge detection},
   author={Luo, Zhengqiao and Lin, Chuan and Li, Fuzhang and Pan, Yongcai},
